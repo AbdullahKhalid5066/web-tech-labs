@@ -1,0 +1,3 @@
+# Lab 01 Reflection
+
+During this lab, I learned how to create and manage files using Git. I practiced initializing a repository, adding and committing files, and pushing changes to GitHub. I also learned how branches work by creating an experiment branch and merging it back into the main branch. This helped me understand how version control keeps track of changes and allows safe experimentation. Overall, this lab improved my confidence in using Git for project management.
