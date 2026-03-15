@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Exercise</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body>
+    <header>
+        <h1>Form Styling</h1>
+        <p>Practice styling input fields, focus states, error feedback, and form layout.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="backgrounds.html">Backgrounds</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li><a href="navigation.html">Navigation</a></li>
+            <li><a href="transforms.html">Transforms</a></li>
+            <li><a href="advanced.html">Advanced Effects</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="github.html">GitHub Pages</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="error" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a password">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select</option>
+                        <option value="us">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <div class="success">Registration successful!</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CS 224L Web Technologies</p>
+    </footer>
+</body>
+</html>

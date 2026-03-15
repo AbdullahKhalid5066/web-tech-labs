@@ -1,0 +1,91 @@
+/* Typography CSS - Font and text styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato&family=Open+Sans&display=swap');
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.size-px {
+    font-size: 16px;
+}
+
+.size-em {
+    font-size: 1.2em;
+}
+
+.size-rem {
+    font-size: 1.5rem;
+}
+
+.size-percent {
+    font-size: 120%;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+.decoration-underline {
+    text-decoration: underline;
+}
+
+.decoration-overline {
+    text-decoration: overline;
+}
+
+.decoration-line-through {
+    text-decoration: line-through;
+}
+
+.transform-uppercase {
+    text-transform: uppercase;
+}
+
+.transform-lowercase {
+    text-transform: lowercase;
+}
+
+.transform-capitalize {
+    text-transform: capitalize;
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.clipped-text {
+    background: url('https://via.placeholder.com/200x100') no-repeat center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3em;
+    font-weight: bold;
+}
