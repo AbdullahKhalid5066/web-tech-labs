@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 05 & 06 - CSS Layout Techniques & Responsive Design</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <!-- Title Page -->
+  <header class="title-page" id="title-page">
+    <div class="title-card">
+      <img class="logo" src="uet-logo.jpeg" alt="University of Engineering & Technology Peshawar logo" />
+      <h1>Lab 05 &amp; 06</h1>
+      <h2>CSS Layout Techniques &amp; Responsive Design</h2>
+      <div class="meta">
+        <p><strong>Name:</strong> Abdullah Khalid</p>
+        <p><strong>Reg No:</strong> 24PWBCS1404</p>
+        <p><strong>Department:</strong> Computer Science</p>
+        <p><strong>Semester:</strong> 3rd</p>
+        <p><strong>Section:</strong> B</p>
+        <p><strong>Submission Date:</strong> 17/03/2026</p>
+        <p><strong>Submitted To:</strong> Sir Mohammad</p>
+      </div>
+      <p class="note">This lab demonstrates modern CSS layout techniques including display, float, positioning, Flexbox, Grid, and responsive design using media queries.</p>
+      <a class="cta" href="#toc">Go to Demonstrations</a>
+    </div>
+  </header>
+
+  <!-- Table of Contents -->
+  <nav class="toc" id="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#display">Display Property Fundamentals</a></li>
+      <li><a href="#float">Float-Based Layouts</a></li>
+      <li><a href="#positioning">CSS Positioning</a></li>
+      <li><a href="#flexbox">Flexbox Layout System</a></li>
+      <li><a href="#grid">CSS Grid Layout System</a></li>
+      <li><a href="#media">Media Queries &amp; Responsive Design</a></li>
+      <li><a href="#combined">Combined Layout Techniques</a></li>
+      <li><a href="#tasks">Task Examples</a></li>
+    </ol>
+  </nav>
+
+  <!-- Display Property Fundamentals -->
+  <section id="display" class="demo-section">
+    <h2>Part A: Display Property Fundamentals</h2>
+
+    <article class="demo">
+      <h3>Exercise 1: Display Property Values</h3>
+      <p>These examples show how different display values affect layout.</p>
+      <div class="display-demo">
+        <div class="display-block">I am <code>display: block</code></div>
+        <span class="display-inline">I am <code>display: inline</code></span>
+        <span class="display-inline">I sit next to another inline element</span>
+        <div class="display-inline-block">I am <code>display: inline-block</code></div>
+        <div class="display-none">I am hidden with <code>display: none</code></div>
+        <div class="visibility-hidden">I am hidden with <code>visibility: hidden</code></div>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 2: Display in Navigation</h3>
+      <p>Horizontal and vertical navigation using different display values.</p>
+      <nav class="nav-demo">
+        <ul class="nav-horizontal">
+          <li><a href="#display">Display</a></li>
+          <li><a href="#float">Float</a></li>
+          <li><a href="#positioning">Positioning</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+        <ul class="nav-vertical">
+          <li><a href="#display">Display</a></li>
+          <li><a href="#float">Float</a></li>
+          <li><a href="#positioning">Positioning</a></li>
+        </ul>
+      </nav>
+
+      <div class="dropdown-demo">
+        <button class="dropdown-toggle" aria-expanded="false">Dropdown menu</button>
+        <div class="dropdown-menu" role="menu">
+          <a href="#" role="menuitem">Option 1</a>
+          <a href="#" role="menuitem">Option 2</a>
+          <a href="#" role="menuitem">Option 3</a>
+        </div>
+      </div>
+
+      <div class="table-display">
+        <div class="table-row">
+          <div class="table-cell">Row 1, Cell 1</div>
+          <div class="table-cell">Row 1, Cell 2</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">Row 2, Cell 1</div>
+          <div class="table-cell">Row 2, Cell 2</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Float-Based Layouts -->
+  <section id="float" class="demo-section">
+    <h2>Part B: Float-Based Layouts</h2>
+
+    <article class="demo">
+      <h3>Exercise 3: Basic Float Implementation</h3>
+      <p>Text wraps around floated images and creates multi-column float layouts.</p>
+      <div class="float-demo clearfix">
+        <img class="float-left" src="https://via.placeholder.com/220x160?text=Float+Left" alt="Float left example" />
+        <p>Floating an image left allows text to flow around it, giving a magazine-style layout. It is essential to clear floats (see the clearfix below) to prevent parent collapse.</p>
+        <img class="float-right" src="https://via.placeholder.com/220x160?text=Float+Right" alt="Float right example" />
+        <p>Floated blocks can be used to build multi-column layouts. In older designs this was a common technique before Flexbox/Grid became widely supported.</p>
+      </div>
+
+      <div class="float-columns clearfix">
+        <div class="float-col">Column 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum.</div>
+        <div class="float-col">Column 2: Suspendisse potenti. Praesent commodo, purus vel porttitor molestie, nisl velit.</div>
+        <div class="float-col">Column 3: Donec sagittis, nibh id convallis vestibulum, libero eros sagittis eros.</div>
+      </div>
+
+      <div class="clearfix">This container uses a clearfix to contain floats.</div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 4: Float Challenges and Solutions</h3>
+      <p>Using clearfix and responsive adjustments to avoid float collapse.</p>
+
+      <div class="float-grid clearfix">
+        <div class="float-grid-item">1</div>
+        <div class="float-grid-item">2</div>
+        <div class="float-grid-item">3</div>
+        <div class="float-grid-item">4</div>
+        <div class="float-grid-item">5</div>
+        <div class="float-grid-item">6</div>
+      </div>
+
+      <p class="note">On small screens, media queries collapse floated columns into a single column for better readability.</p>
+    </article>
+  </section>
+
+  <!-- Positioning -->
+  <section id="positioning" class="demo-section">
+    <h2>Part C: CSS Positioning</h2>
+
+    <article class="demo">
+      <h3>Exercise 5: Position Property Values</h3>
+      <p>Examples of static, relative, absolute, fixed, and sticky positioning.</p>
+
+      <div class="position-demo">
+        <div class="pos-static">Static position (default)</div>
+        <div class="pos-relative">Relative (offset)</div>
+        <div class="pos-absolute">Absolute (inside positioned ancestor)</div>
+        <div class="pos-fixed">Fixed (viewport)</div>
+        <div class="pos-sticky">Sticky (sticks at top after scrolling)</div>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 6: Practical Positioning Scenarios</h3>
+      <p>Modal dialogs, sticky headers, and tooltips use positioning and z-index layering.</p>
+
+      <button class="modal-open">Open modal</button>
+      <div class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Close modal">×</button>
+          <h3>Modal dialog</h3>
+          <p>This modal is absolutely positioned inside a fixed overlay. On small screens, it becomes full-screen for better usability.</p>
+        </div>
+      </div>
+
+      <div class="tooltip-demo">
+        <button class="tooltip-trigger">Hover me</button>
+        <span class="tooltip" role="tooltip">Tooltip using absolute positioning and z-index layering.</span>
+      </div>
+
+      <header class="sticky-header">
+        <p>Sticky header: stays at top once scrolled.</p>
+      </header>
+
+      <div class="position-pad">
+        <p>Scroll down to see sticky header behavior; it becomes fixed after passing its container.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- Flexbox -->
+  <section id="flexbox" class="demo-section">
+    <h2>Part D: Flexbox Layout System</h2>
+
+    <article class="demo">
+      <h3>Exercise 7: Flex Container Properties</h3>
+      <div class="flex-demo">
+        <div class="flex-container">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+          <div class="flex-item">Item 4</div>
+        </div>
+        <p class="note">This container uses <code>display: flex</code> with <code>justify-content</code> and <code>align-items</code>.</p>
+      </div>
+
+      <div class="flex-direction-demo">
+        <div class="flex-heading">Flex Direction</div>
+        <div class="flex-row">
+          <div class="flex-item">Row 1</div>
+          <div class="flex-item">Row 2</div>
+          <div class="flex-item">Row 3</div>
+        </div>
+        <div class="flex-column">
+          <div class="flex-item">Col 1</div>
+          <div class="flex-item">Col 2</div>
+          <div class="flex-item">Col 3</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 8: Flex Item Properties</h3>
+      <p>Flex items can grow, shrink, and define basis sizes.</p>
+      <div class="flex-grow-demo">
+        <div class="flex-grow-item grow-1">grow: 1</div>
+        <div class="flex-grow-item grow-2">grow: 2</div>
+        <div class="flex-grow-item grow-0">grow: 0</div>
+      </div>
+
+      <div class="order-demo">
+        <div class="flex-item order-3">Order 3</div>
+        <div class="flex-item order-1">Order 1</div>
+        <div class="flex-item order-2">Order 2</div>
+      </div>
+
+      <p class="note">Flexbox makes building responsive navbars and card grids straightforward.</p>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise G: Flexbox Practical Layouts</h3>
+      <p>Responsive nav, card layout, and holy grail using Flexbox.</p>
+
+      <div class="flex-nav" aria-label="Primary">
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="flex-nav-list">
+          <li><a href="#display">Home</a></li>
+          <li><a href="#float">Features</a></li>
+          <li><a href="#positioning">Pricing</a></li>
+          <li><a href="#grid">Docs</a></li>
+          <li><a href="#media">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="flex-cards">
+        <article class="card">
+          <h4>Card title</h4>
+          <p>Flex items can stretch to match height.</p>
+          <div class="card-actions"><button>Action</button></div>
+        </article>
+        <article class="card">
+          <h4>Another card</h4>
+          <p>Cards resize responsibly on different breakpoints.</p>
+          <div class="card-actions"><button>Action</button></div>
+        </article>
+        <article class="card">
+          <h4>Third card</h4>
+          <p>Using <code>align-self</code> to control individual item alignment.</p>
+          <div class="card-actions"><button>Action</button></div>
+        </article>
+      </div>
+
+      <div class="holy-grail">
+        <div class="hg-left">Left sidebar</div>
+        <div class="hg-main">Main content area</div>
+        <div class="hg-right">Right sidebar</div>
+      </div>
+    </article>
+  </section>
+
+  <!-- CSS Grid -->
+  <section id="grid" class="demo-section">
+    <h2>Part E: CSS Grid Layout System</h2>
+
+    <article class="demo">
+      <h3>Exercise 10: Grid Container Properties</h3>
+      <div class="grid-demo">
+        <div class="grid-container">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+        </div>
+        <p class="note">This grid uses <code>grid-template-columns</code>, <code>gap</code>, and alignment properties.</p>
+      </div>
+
+      <div class="grid-areas">
+        <div class="grid-areas-container">
+          <header class="area header">Header</header>
+          <nav class="area nav">Nav</nav>
+          <main class="area main">Main</main>
+          <aside class="area aside">Aside</aside>
+          <footer class="area footer">Footer</footer>
+        </div>
+        <p class="note">Grid template areas make complex layouts more readable.</p>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 11: Grid Item Properties</h3>
+      <div class="grid-item-demo">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+      </div>
+      <p class="note">Individual items can span multiple rows/columns with <code>grid-column</code> and <code>grid-row</code>.</p>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 12: Advanced Grid Features</h3>
+      <p>Flexible tracks using <code>minmax()</code>, <code>repeat()</code>, and <code>auto-fit</code>.</p>
+      <div class="grid-advanced">
+        <div class="photo">Photo 1</div>
+        <div class="photo">Photo 2</div>
+        <div class="photo">Photo 3</div>
+        <div class="photo">Photo 4</div>
+        <div class="photo">Photo 5</div>
+        <div class="photo">Photo 6</div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Media Queries -->
+  <section id="media" class="demo-section">
+    <h2>Part F: Media Queries &amp; Responsive Design</h2>
+
+    <article class="demo">
+      <h3>Exercise 13: Media Query Fundamentals</h3>
+      <p>Breakpoints change layout and demonstrate device features.</p>
+      <div class="breakpoint-indicator">
+        <span class="indicator">Resize the window to see breakpoints activate.</span>
+        <div class="breakpoint-blocks">
+          <div class="block block-mobile">Mobile</div>
+          <div class="block block-tablet">Tablet</div>
+          <div class="block block-desktop">Desktop</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 14: Mobile-First Approach</h3>
+      <p>The base styles are mobile-friendly; larger screens enhance the layout.</p>
+      <div class="responsive-panel">
+        <p>On mobile, this panel stacks vertically. On tablet and above it changes layout.</p>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Exercise 15: Responsive Images</h3>
+      <p>Using <code>srcset</code> and <code>picture</code> for responsive art direction.</p>
+      <picture>
+        <source media="(min-width: 900px)" srcset="https://via.placeholder.com/900x300?text=Desktop+Image" />
+        <source media="(min-width: 600px)" srcset="https://via.placeholder.com/600x200?text=Tablet+Image" />
+        <img src="https://via.placeholder.com/400x150?text=Mobile+Image" alt="Responsive example" />
+      </picture>
+    </article>
+  </section>
+
+  <!-- Combined Layout Techniques -->
+  <section id="combined" class="demo-section">
+    <h2>Part G: Layout Combinations &amp; Best Practices</h2>
+
+    <article class="demo">
+      <h3>Exercise 16: Combining Layout Techniques</h3>
+      <p>Here we nest Flexbox inside Grid and vice versa to build complex layouts.</p>
+      <div class="combo-layout">
+        <div class="combo-left">
+          <div class="combo-flex">
+            <div class="combo-item">Flex in Grid 1</div>
+            <div class="combo-item">Flex in Grid 2</div>
+          </div>
+        </div>
+        <div class="combo-right">
+          <div class="combo-grid">
+            <div class="grid-mini">Grid A</div>
+            <div class="grid-mini">Grid B</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="demo">
+      <h3>Task Examples (Selected)</h3>
+
+      <div class="task">
+        <h4>Task 1: Display Property Showcase</h4>
+        <p>This page demonstrates how block, inline, inline-block, table display, and hidden elements behave across breakpoints.</p>
+      </div>
+
+      <div class="task">
+        <h4>Task 3: Positioning Challenge</h4>
+        <p>Includes a fixed header that becomes static on small screens and a modal that becomes full-screen on mobile.</p>
+      </div>
+
+      <div class="task">
+        <h4>Task 4: Flexbox Navigation System</h4>
+        <p>A responsive navigation bar that becomes a hamburger menu on small screens.</p>
+      </div>
+
+      <div class="task">
+        <h4>Task 5: Flexbox Card Layout</h4>
+        <p>Cards are equal height and rearrange based on breakpoints.</p>
+      </div>
+
+      <div class="task">
+        <h4>Task 6: CSS Grid Photo Gallery</h4>
+        <p>Grid adapts from masonry-style to a single column with responsive gap sizes.</p>
+      </div>
+
+      <div class="task">
+        <h4>Task 10: Media Query Demonstration Page</h4>
+        <p>Breakpoints and typography scaling are demonstrated at different viewport widths.</p>
+      </div>
+
+    </article>
+  </section>
+
+  <footer class="footer">
+    <p>Lab 05 &amp; 06 Demonstration • Built with HTML &amp; CSS • Mobile-first responsive design</p>
+  </footer>
+</body>
+</html>
